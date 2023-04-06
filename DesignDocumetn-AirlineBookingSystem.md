@@ -40,3 +40,21 @@ We need to build a backend system that can support different features for an onl
 - Listing FAQ which will be static data
   - [v2] prepare seat selection
 - Coupon for discount and offers
+
+* While making a booking a person can reserve more that one seats with one login id.
+
+## Non Functional Requirements:
+
+- We can expect that we are going to have more flights searches than flight booking.
+- The system needs to be accurate in terms of booking
+- Expect that we will be having approx 1,00,000 total users and 5,00,000 booking might come up in one quarter
+- So in one day we can expect 5000 bookings.
+- Systems should be capable of scaling up to flight prices , before users makes the final booking
+- Concurrency should be handles
+
+### Capacity Estimation
+
+- Storage estimates
+  - For upcoming 5 years , 80,00,000 bookings, 2,00,000 users(double) , Considering all the users records and booking records take 10 MB of data, then overall 10 TB of memory should be fine for our initial pilot run.
+- Traffic estimates-
+  - If we consider 30:1 as the search:booking ratio ,then at mac we expect 15000 search queries a day .2 query / s
