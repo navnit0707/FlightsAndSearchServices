@@ -58,3 +58,7 @@ We need to build a backend system that can support different features for an onl
   - For upcoming 5 years , 80,00,000 bookings, 2,00,000 users(double) , Considering all the users records and booking records take 10 MB of data, then overall 10 TB of memory should be fine for our initial pilot run.
 - Traffic estimates-
   - If we consider 30:1 as the search:booking ratio ,then at mac we expect 15000 search queries a day .2 query / s
+
+## Design Diagram
+
+![Diagram ](Blank%20diagram.svg)
