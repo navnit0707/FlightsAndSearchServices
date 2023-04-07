@@ -1,5 +1,6 @@
 //common js moduling
 const express = require("express");
+require("dotenv").config();
 
 const setupAndStartServer = async () => {
   // create the express object
