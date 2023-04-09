@@ -1,5 +1,22 @@
 # Welcome to Flights Service
 
+## Some Important folder and their usecases
+
+- ### middlewares
+  - All the middlewares will be kept here only
+- ### models
+  - models are to structure how our table be look like
+- ### repository
+  - repository role is to interact with the database directly, no one else will interact with DB directly
+- ### routes
+  - All the routes will be kept here
+- ### services
+  - Having a sepearte service folder goal is to keep sepearte all the buisness logic
+- ### controllers
+  - Role of controller is to get the Requests pass it to backend , backend proccess and thus passes res to the frontend
+- ### migrations
+  - this is for database migration (sequelize)
+
 ## Project Setup
 
 - clone the project on your local
@@ -21,16 +38,22 @@
 ```
 
 - Once you have added your db config as listed above , go to the src folder from your terminal and execute `npx sequelize db:create`
-and then execute 
-`npx sequelize db:migrate`
-# DB Design 
-- Airplane Table 
+  and then execute
+  `npx sequelize db:migrate`
+
+# DB Design
+
+- Airplane Table
 - Flight
 - Airport
 - City
 
-## Breif
+  ## Brief
+
 - A flight belongs to an airplance but one can be used in muliple flights
 - A city has many airports but one airport belogs to a city
-- One airport can have many flights , but a  flight belongs to one aiport
+- One airport can have many flights , but a flight belongs to one aiport
+
+# DB Design Diagram
+
 ![Alt text](designDiagram.png)
