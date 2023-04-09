@@ -1,12 +1,10 @@
 //index js returns all the module available in model folder by deafault
-const city = require("../models/city");
-const city = require("../models/city");
 const { City } = require("../models/index");
 
 class CityRepository {
   async createCity({ name }) {
     try {
-      const city = await CityRepository.crete({ name });
+      const city = await City.create({ name });
       return city;
     } catch (error) {
       console.log("Somthing went wrong in the repository layer");
@@ -31,7 +29,7 @@ class CityRepository {
     try {
       const city = await City.update(data, {
         where: {
-          id: city,
+          id: cityId,
         },
       });
       return city;

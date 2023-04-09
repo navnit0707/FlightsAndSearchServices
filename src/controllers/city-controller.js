@@ -19,7 +19,7 @@ const create = async (req, res) => {
       data: {},
       success: false,
       message: "Not able to create a city",
-      err: err,
+      err: error,
     });
   }
 };
