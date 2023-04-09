@@ -48,6 +48,21 @@ class CityRepository {
       throw { error };
     }
   }
+
+  /**
+   * implemented get All cities in repository layer ,
+   *  and it will be consumed in service layer , and in model , it will
+   *  be exported so that can be used in routes
+   */
+  async getAllCities() {
+    try {
+      const cities = await City.findAll();
+      return cities;
+    } catch (error) {
+      console.log("Somthing went wrong in the repository layer");
+      throw { error };
+    }
+  }
 }
 
 module.exports = CityRepository;
