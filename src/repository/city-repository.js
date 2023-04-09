@@ -1,3 +1,5 @@
+const { Op } = require("sequelize");
+
 //index js returns all the module available in model folder by deafault
 const { City } = require("../models/index");
 
@@ -54,8 +56,19 @@ class CityRepository {
    *  and it will be consumed in service layer , and in model , it will
    *  be exported so that can be used in routes
    */
-  async getAllCities() {
+  async getAllCities(filter) {
+    //filter can be empty
     try {
+      if (filter.name) {
+        const cities = await City.findAll({
+          where: {
+            name: {
+              [Op.startsWith]: filter.name,
+            },
+          },
+        });
+        return cities;
+      }
       const cities = await City.findAll();
       return cities;
     } catch (error) {
@@ -66,3 +79,7 @@ class CityRepository {
 }
 
 module.exports = CityRepository;
+
+// flow: repository -> service -> model
+
+// repository layer is sensitive because it interects directly with db
