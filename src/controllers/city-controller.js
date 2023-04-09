@@ -65,7 +65,7 @@ const get = async (req, res) => {
       data: {},
       success: false,
       message: "Not able to get the city",
-      err: err,
+      err: error,
     });
   }
 };
@@ -88,7 +88,7 @@ const update = async (req, res) => {
       data: {},
       success: false,
       message: "Not able to update a city",
-      err: err,
+      err: error,
     });
   }
 };
