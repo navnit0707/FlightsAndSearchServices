@@ -58,7 +58,7 @@
 
 # DB Design Diagram
 
-![Alt text](designDiagram.png)
+![Alt text](./static/assetsReadme/designDiagram.png)
 
 # Tables
 
@@ -74,6 +74,6 @@ Relationship-> city has many airports and Airport belongs to a city (one to many
   npx sequelize db:migrate
 ```
 
-![airportsTableSS](airportsTableSS.png)
+![airportsTableSS](./static/assetsReadme/airportsTableSS.png)
 
-![citiesTableSS](citiesTableSS.png)
+![citiesTableSS](./static/assetsReadme/citiesTableSS.png)
