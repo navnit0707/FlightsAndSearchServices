@@ -16,6 +16,8 @@
   - Role of controller is to get the Requests pass it to backend , backend proccess and thus passes res to the frontend
 - ### migrations
   - this is for database migration (sequelize)
+- ### seeders
+  - to put some starting data in db
 
 ## Project Setup
 
@@ -65,6 +67,12 @@
 ### Airport -> id, name , address, city_id , created_at, deleted_at
 
 Relationship-> city has many airports and Airport belongs to a city (one to many)
+
+```
+  npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
+
+  npx sequelize db:migrate
+```
 
 ![airportsTableSS](airportsTableSS.png)
 
