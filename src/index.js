@@ -6,7 +6,7 @@ const { PORT } = require("./config/serverConfig");
 
 const ApiRoutes = require("./routes/index");
 const db = require("./models/index");
-const { Airplane } = require("./models/index");
+//const { Airplane } = require("./models/index");
 
 const setupAndStartServer = async () => {
   // create the express object
@@ -23,9 +23,9 @@ const setupAndStartServer = async () => {
       db.sequelize.sync({ alter: true });
     }
 
-    await Airplane.create({
-      modelNumber: "Bombadier CR",
-    });
+    // await Airplane.create({
+    //   modelNumber: "Bombadier CR",
+    // });
   });
 };
 
