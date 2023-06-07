@@ -3,7 +3,7 @@ const { compareTime } = require("../utils/helper");
 class FlightService {
   constructor() {
     this.airplaneRepository = new AirplaneRepository();
-    this.flghtRepository = new FlightRepository();
+    this.flightRepository = new FlightRepository();
   }
   async createFlight(data) {
     try {
@@ -25,9 +25,15 @@ class FlightService {
     }
   }
 
-  async getFlightData() {}
-
-  // future update
+  async getFlightData() {
+    try {
+      const flights = await this.flightRepository.getAllFlights(data);
+      return flights;
+    } catch (error) {
+      console.log("Something went wrong at flight service layer");
+      throw { error };
+    }
+  }
 }
 
 module.exports = FlightService;
