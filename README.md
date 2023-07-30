@@ -77,3 +77,11 @@ Relationship-> city has many airports and Airport belongs to a city (one to many
 ![airportsTableSS](./static/assetsReadme/airportsTableSS.png)
 
 ![citiesTableSS](./static/assetsReadme/citiesTableSS.png)
+
+### Some import sql query
+
+- mysql -u root -p
+- show databases
+- USE databaseName;
+- show tables
+- SELECT \* FROM tableName
