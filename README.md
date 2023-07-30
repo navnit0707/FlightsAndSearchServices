@@ -58,7 +58,7 @@
 
 # DB Design Diagram
 
-![Alt text](./static/assetsReadme/designDiagram.png)
+![designDiagram](https://github.com/navnit0707/FlightsAndSearchServices/assets/40719341/7ba03dbd-e6ca-42bc-9b10-319421fb12f4)
 
 # Tables
 
@@ -74,9 +74,9 @@ Relationship-> city has many airports and Airport belongs to a city (one to many
   npx sequelize db:migrate
 ```
 
-![airportsTableSS](./static/assetsReadme/airportsTableSS.png)
+![airportsTableSS](https://github.com/navnit0707/FlightsAndSearchServices/assets/40719341/cd90798b-8219-4ccd-9da8-8ebc714c016e)
 
-![citiesTableSS](./static/assetsReadme/citiesTableSS.png)
+![citiesTableSS](https://github.com/navnit0707/FlightsAndSearchServices/assets/40719341/06a68f92-d9ea-4199-8f56-88a912d1673a)
 
 ### Some import sql query
 
