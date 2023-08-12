@@ -22,4 +22,5 @@ router.post(
 router.get("flights", FlightController.getAll);
 
 router.post("/airports", AirportController.create);
+router.get("/flights/:id", FlightController.get);
 module.exports = router;
